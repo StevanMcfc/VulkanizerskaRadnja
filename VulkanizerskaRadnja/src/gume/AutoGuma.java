@@ -1,56 +1,124 @@
 package gume;
+/**
+ * 
+ * @author StevanMcfc
+ * @version 1.0
+ * Klasa koja opisuje automobilsku gumu atributima markaModel, precnik, sirina i visina.
+ *
+ */
 public class AutoGuma {
 	
+	
+		/**
+		 * Atribut koji prikazuje marku/model gume
+		 */
 		private String markaModel = null;
+		
+		/**
+		 * Atribut koji prikazuje precnik gume
+		 */
 		private int precnik = 0;
+		
+		/**
+		 * Atribut koji prikazuje sirinu gume
+		 */
 		private int sirina = 0;
+		
+		/**
+		 * Atribut koji prikazuje visinu gume
+		 */
 		private int visina = 0;
 		
+		
+		/**
+		 * Metoda koja vraca marku/model
+		 * @return naziv marke/modela
+		 */
 		public String getMarkaModel() {
 			return markaModel;
 		}
 		
+		/**
+		 * Metoda kojom se stavlja nova vrednost marke/modela
+		 * @throws java.lang.RuntimeException ako je unesena nedozvoljena vrednost
+		 * @param marka/model
+		 */
 		public void setMarkaModel(String markaModel) {
 			if (markaModel==null || markaModel.length()<3)
 					throw new RuntimeException("Morate uneti marku i model");
 			this.markaModel = markaModel;
 		}
 		
+		/**
+		 * Metoda koja vraca precnik
+		 * @return precnik
+		 */
 		public int getPrecnik() {
 			return precnik;
 		}
 		
+		/**
+		 * Metoda kojom se stavlja nova vrednost precnika
+		 * @throws java.lang.RuntimeException ako je unesena nedozvoljena vrednost
+		 * @param precnik
+		 */
 		public void setPrecnik(int precnik) {
 			if (precnik < 13 && precnik > 22)
 					throw new RuntimeException("Precnik van opsega");
 			this.precnik = precnik;
 		}
 		
+		/**
+		 * Metoda koja vraca sirinu
+		 * @return sirina
+		 */
 		public int getSirina() {
 			return sirina;
 		}
 		
+		/**
+		 * Metoda kojom se stavlja nova vrednost sirine
+		 * @throws java.lang.RuntimeException ako je unesena nedozvoljena vrednost
+		 * @param sirina
+		 */
 		public void setSirina(int sirina) {
 			if (sirina < 135 && sirina > 355)
 					throw new RuntimeException("Sirina van opsega");
 			this.sirina = sirina;
 		}
 		
+		/**
+		 * Metoda koja vraca visinu
+		 * @return visina
+		 */
 		public int getVisina() {
 			return visina;
 		}
 		
+		/**
+		 * Metoda kojom se stavlja nova vrednost visine
+		 * @throws java.lang.RuntimeException ako je unesena nedozvoljena vrednost
+		 * @param visina
+		 */
 		public void setVisina(int visina) {
 			if (visina < 25 || visina > 95)
 				throw new RuntimeException("Visina van opsega");
 		this.visina = visina;
 		}
 		
+		/**
+		 * Metoda koja pretvara klasu u string
+		 * @return string svih atributa
+		 */
 		@Override
 		public String toString() {
 			return "AutoGuma [markaModel=" + markaModel + ", precnik=" + precnik + ", sirina=" + sirina + ", visina=" + visina + "]";
 		}
 		
+		/**
+		 * Metoda koja poredi dva objekta klase AutoGuma
+		 * @return true/false
+		 */
 		@Override
 		public boolean equals(Object obj) {
 			if (this == obj)
