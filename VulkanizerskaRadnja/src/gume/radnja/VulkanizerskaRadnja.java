@@ -6,10 +6,10 @@ import gume.AutoGuma;
 
 
 /**
- * 
+ * Klasa koja sadrzi listu guma. Nove gume se mogu dodavati, i lista se moze pretraziti
  * @author StevanMcfc
  * @version 1.0
- * Klasa koja sadrzi listu guma. Nove gume se mogu dodavati, i lista se moze pretraziti
+ *
  */
 public class VulkanizerskaRadnja {
 	
@@ -22,7 +22,7 @@ public class VulkanizerskaRadnja {
 	 * Klasa koja dodaje gumu u listu, ako objekat nije null, ili vec postoji
 	 * @param a autoGuma
 	 * @throws java.lang.NullPointerException Baca ovaj exception ako je guma null
-	 * @throws java.lang.RuntimeException Baca ako guma vec postoji
+	 * @throws java.lang.RuntimeException Baca ako guma vec postoji u listi
 	 */
 	public void dodajGumu(AutoGuma a) {
 		if (a == null)
